@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.like</groupId>
+    <artifactId>like-boot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>like-boot</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>like-common</module>
+        <module>like-api</module>
+        <module>like-generator</module>
+        <module>like-system</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.0.RELEASE</version>
+    </parent>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <lombok.version>1.16.20</lombok.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <swagger.version>1.5.10</swagger.version>
+        <shiro.version>1.4.0</shiro.version>
+        <springfox.version>2.6.1</springfox.version>
+        <poi.version>3.8</poi.version>
+        <dom4j.version>1.6.1</dom4j.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.1.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+    </dependencies>
+
+<!--    <profiles>-->
+<!--        &lt;!&ndash; 本地环境 &ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>local</id>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>local</spring.profiles.active>-->
+<!--                <log.level>debug</log.level>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        &lt;!&ndash; 开发环境 &ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>dev</spring.profiles.active>-->
+<!--                <log.level>info</log.level>-->
+<!--            </properties>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--        </profile>-->
+<!--        &lt;!&ndash;测试环境 &ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>test</spring.profiles.active>-->
+<!--                <log.level>info</log.level>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+</project>
